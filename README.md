@@ -1,5 +1,6 @@
 # ByName
  Blender addon including various functions that deal with aplying an action to multiple objects with similar names. (Technically everything is a derivative from the select by name so you can download only that one)
+ You also don't have to unhide objects since they do it automatically with the select command. 
  
  So far added:
  Delete objects by name (3D View > Object)
