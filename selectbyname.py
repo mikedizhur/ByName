@@ -1,7 +1,7 @@
 bl_info = {
-    "name": "By name",
+    "name": "Select by name",
     "author": "RamenSlayer",
-    "version": (1),
+    "version": (1, 0),
     "blender": (2, 91, 2),
     "location": "View3D > Select",
     "description": "Select multiple objects with similar name with one button.",
