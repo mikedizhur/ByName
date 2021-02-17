@@ -57,7 +57,7 @@ def menu_func(self, context):
     
 def register():
     bpy.utils.register_class(OBJECT_OT_namedselect)
-    bpy.types.VIEW3D_MT_object_select.append(menu_func)
+    bpy.types.VIEW3D_MT_select_object.append(menu_func)
 
 def unregister():
     bpy.utils.unregister_class(OBJECT_OT_namedselect)
