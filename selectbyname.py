@@ -18,16 +18,13 @@ from bpy.types import (
 from bpy.props import (StringProperty, BoolProperty)
 
 
-def isitin(keywords, searched):
+def strsinstr(keywords, searched):
     """function for checking if all words in a list are in a string"""
-    truthcount = 0
     for word in keywords:
-        if word.lower() in searched.lower():
-            truthcount += 1
-    if truthcount == len(keywords):
-        return True
-    else:
-        return False
+        if not (word.lower() in searched.lower()):
+            return False
+    return True
+
 
 class OBJECT_OT_namedselect(Operator):
     bl_label = "Select by Name"
@@ -53,7 +50,7 @@ class OBJECT_OT_namedselect(Operator):
         select_keywords = self.selectnames.split()
         bpy.ops.object.select_all(action='DESELECT')
         for object in bpy.data.objects:
-            if isitin(select_keywords, object.name.lower()):
+            if strsinstr(select_keywords, object.name.lower()):
                 if object.hide_get() and not self.unhide:
                     continue
                 object.hide_set(False)
