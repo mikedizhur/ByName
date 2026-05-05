@@ -1,9 +1,8 @@
-# ByName
- Blender addon including various functions that deal with aplying an action to multiple objects with similar names. (Technically everything is a derivative from the select by name so you can download only that one)
- You also don't have to unhide objects since they do it automatically with the select command. 
- 
-So far added:
- Delete objects by name (3D View > Object)
- Select object by name (3D View > Select)
- If you enter multiple words or combinations of symbols separated with a space it will choose only objects that fit both words.
-Very basic. Select any object with a name that includes a certain string. Useful for big scenes with multiple collections and duplicated objects. 
+# Select By Name
+Blender addon to select objects in a scene if they contain a string. Like "select pattern" but I think that didn't exist when the addon was written. 
+Unlike "select pattern" doesn't use regex, just simple string matching. Adds an option to unhide hidden objects if they match the string (the only reason to use this instead of "select pattern" now).
+
+## Usage
+You can find the option in the `3D view > Select` menu.
+
+If multiple strings separated by spaces are entered, selects objects that match ALL of them.
